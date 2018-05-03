@@ -17,12 +17,8 @@ CanHacker *canHacker = NULL;
 void setup() {
     Serial.begin(115200);
     SPI.begin();
-
-    Stream *interfaceStream = &Serial;
-    Stream *debugStream = &Serial;
     
-    
-    canHacker = new CanHacker(interfaceStream, debugStream, SPI_CS_PIN);
+    canHacker = new CanHacker(&Serial, NULL, SPI_CS_PIN);
     canHacker->enableLoopback();            // Enable Loopback mode for offline tests
     lineReader = new CanHackerLineReader(canHacker);
     
@@ -31,10 +27,10 @@ void setup() {
 
 void loop() {
     if (digitalRead(INT_PIN) == LOW) {
-        CanHacker::ERROR error = canHacker->processInterrupt();
+        canHacker->processInterrupt();
     }
     if (Serial.available()) {
-          CanHacker::ERROR error = lineReader->process();
+        lineReader->process();
     }
 }
 
