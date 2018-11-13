@@ -50,11 +50,10 @@ void setup() {
     Serial.begin(115200);
     while (!Serial);
     SPI.begin();
-    softwareSerial.begin(115200);
 
     Stream *interfaceStream = &Serial;
     
-    canHacker = new CanHacker(interfaceStream, null, SPI_CS_PIN);
+    canHacker = new CanHacker(interfaceStream, NULL, SPI_CS_PIN);
     lineReader = new CanHackerLineReader(canHacker);
     
     pinMode(INT_PIN, INPUT);
