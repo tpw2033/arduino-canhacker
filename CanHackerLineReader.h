@@ -1,6 +1,7 @@
 #ifndef CANHACKERLINEREADER_H_
 #define CANHACKERLINEREADER_H_
 
+#include "Stream.h"
 #include "CanHacker.h"
 
 class CanHackerLineReader {
