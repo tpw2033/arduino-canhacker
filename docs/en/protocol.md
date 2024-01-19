@@ -1,6 +1,6 @@
 Protocol CanHacker (lawicel) described in [CanHacker for Windows documentation](http://www.mictronics.de/projects/usb-can-bus/)
 
-Library implements it partially. Suported commands listed below.
+Library implements it partially. Supported commands listed below.
 
 ### `C[CR]`
 
