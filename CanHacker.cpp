@@ -163,32 +163,32 @@ CanHacker::ERROR CanHacker::receiveSetBitrateCommand(const char *buffer, const i
     }
     switch(buffer[1]) {
         case '0':
-            writeDebugStream(F("Set bitrate 10KBPS\n"));
-            bitrate = CAN_10KBPS;
+            writeDebugStream(F("Set bitrate 33KBPS\n"));
+            bitrate = CAN_33KBPS;
             break;
         case '1':
-            writeDebugStream(F("Set bitrate 20KBPS\n"));
-            bitrate = CAN_20KBPS;
+            writeDebugStream(F("Set bitrate 33KBPS\n"));
+            bitrate = CAN_33KBPS;
             break;
         case '2':
-            writeDebugStream(F("Set bitrate 50KBPS\n"));
-            bitrate = CAN_50KBPS;
+            writeDebugStream(F("Set bitrate 33KBPS\n"));
+            bitrate = CAN_33KBPS;
             break;
         case '3':
-            writeDebugStream(F("Set bitrate 100KBPS\n"));
-            bitrate = CAN_100KBPS;
+            writeDebugStream(F("Set bitrate 33KBPS\n"));
+            bitrate = CAN_33KBPS;
             break;
         case '4':
-            writeDebugStream(F("Set bitrate 125KBPS\n"));
-            bitrate = CAN_125KBPS;
+            writeDebugStream(F("Set bitrate 33KBPS\n"));
+            bitrate = CAN_33KBPS;
             break;
         case '5':
-            writeDebugStream(F("Set bitrate 250KBPS\n"));
-            bitrate = CAN_250KBPS;
+            writeDebugStream(F("Set bitrate 33KBPS\n"));
+            bitrate = CAN_33KBPS;
             break;
         case '6':
-            writeDebugStream(F("Set bitrate 500KBPS\n"));
-            bitrate = CAN_500KBPS;
+            writeDebugStream(F("Set bitrate 33KBPS\n"));
+            bitrate = CAN_33KBPS;
             break;
         case '7':
             writeDebugStream(F("Bitrate 7 is not supported\n"));
@@ -198,8 +198,8 @@ CanHacker::ERROR CanHacker::receiveSetBitrateCommand(const char *buffer, const i
             return ERROR_INVALID_COMMAND;
             break;
         case '8':
-            writeDebugStream(F("Set bitrate 1000KBPS\n"));
-            bitrate = CAN_1000KBPS;
+            writeDebugStream(F("Set bitrate 33KBPS\n"));
+            bitrate = CAN_33KBPS;
             break;
         default:
             writeDebugStream(F("Unexpected bitrate\n"));
